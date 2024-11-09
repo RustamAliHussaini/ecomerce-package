@@ -19,7 +19,12 @@ class EcommerceCompletionPackageServiceProvider extends PackageServiceProvider
             ->name('ecommerce-completion-package')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_ecommerce_completion_package_table')
+            ->hasMigration('create_warehouses_table')
             ->hasCommand(EcommerceCompletionPackageCommand::class);
+    }
+
+    public function boot()
+    {
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 }
