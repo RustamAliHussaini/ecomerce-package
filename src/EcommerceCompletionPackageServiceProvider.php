@@ -2,9 +2,9 @@
 
 namespace RustamAliHussaini\EcommerceCompletionPackage;
 
+use RustamAliHussaini\EcommerceCompletionPackage\Commands\EcommerceCompletionPackageCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use RustamAliHussaini\EcommerceCompletionPackage\Commands\EcommerceCompletionPackageCommand;
 
 class EcommerceCompletionPackageServiceProvider extends PackageServiceProvider
 {
