@@ -2,13 +2,12 @@
 
 namespace RustamAliHussaini\EcommerceCompletionPackage\Database\Factories;
 
-use RustamAliHussaini\EcommerceCompletionPackage\Models\Warehouse;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use RustamAliHussaini\EcommerceCompletionPackage\Models\Warehouse;
 
 class WarehouseFactory extends Factory
 {
     protected $model = Warehouse::class;
-
 
     public function definition()
     {

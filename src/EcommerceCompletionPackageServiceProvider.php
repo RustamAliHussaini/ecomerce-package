@@ -25,6 +25,6 @@ class EcommerceCompletionPackageServiceProvider extends PackageServiceProvider
 
     public function boot()
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 }
