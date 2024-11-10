@@ -26,25 +26,25 @@ class Warehouse extends Model
         'seller_id',
     ];
 
-    // public function inventories()
-    // {
-    //     return $this->hasMany(Inventory::class);
-    // }
+    public function inventories()
+    {
+        return $this->hasMany(Inventory::class);
+    }
 
-    // public function warehouseTransfers()
-    // {
-    //     return $this->hasMany(WarehouseTransfer::class, 'from_warehouse_id');
-    // }
+    public function warehouseTransfers()
+    {
+        return $this->hasMany(WarehouseTransfer::class, 'from_warehouse_id');
+    }
 
-    // public function warehouseTransfersTo()
-    // {
-    //     return $this->hasMany(WarehouseTransfer::class, 'to_warehouse_id');
-    // }
+    public function warehouseTransfersTo()
+    {
+        return $this->hasMany(WarehouseTransfer::class, 'to_warehouse_id');
+    }
 
-    // public function warehouseTransactions()
-    // {
-    //     return $this->hasMany(WarehouseTransaction::class);
-    // }
+    public function warehouseTransactions()
+    {
+        return $this->hasMany(WarehouseTransaction::class);
+    }
 
     // public function orderLines()
     // {

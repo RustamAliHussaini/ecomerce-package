@@ -2,6 +2,7 @@
 
 namespace RustamAliHussaini\EcommerceCompletionPackage;
 
+use Lunar\Admin\Support\Facades\LunarPanel;
 use RustamAliHussaini\EcommerceCompletionPackage\Commands\EcommerceCompletionPackageCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -23,8 +24,19 @@ class EcommerceCompletionPackageServiceProvider extends PackageServiceProvider
             ->hasCommand(EcommerceCompletionPackageCommand::class);
     }
 
+
+    public function register(): void
+    {
+        LunarPanel::register();
+    }
+
+
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+        $this->publishes([
+            __DIR__ . '/../database/migrations' => database_path('migrations'),
+        ], 'ecommerce-completion-package-migrations');
     }
 }
