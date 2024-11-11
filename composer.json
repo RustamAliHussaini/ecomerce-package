@@ -1,12 +1,12 @@
 {
-    "name": "rustam-ali/ecommerce-completion-package",
+    "name": "ramaki/inventory",
     "description": "This package manage warehouses, inventories, and much more parts of ecommerce.",
     "keywords": [
-        "RustamAliHussaini",
+        "Ramaki",
         "laravel",
-        "ecommerce-completion-package"
+        "inventory"
     ],
-    "homepage": "https://github.com/rustam-ali/ecommerce-completion-package",
+    "homepage": "https://github.com/nawawaran/inventory.git",
     "license": "MIT",
     "repositories": [
         {
@@ -16,9 +16,9 @@
     ],
     "authors": [
         {
-            "name": "RustamAliHussaini",
+            "name": "Ramaki",
             "email": "rustam.ali.hussaini@gmail.com",
-            "role": "Developer"
+            "role": "Software Engineer"
         }
     ],
     "require": {
@@ -43,19 +43,19 @@
     },
     "autoload": {
         "psr-4": {
-            "RustamAliHussaini\\EcommerceCompletionPackage\\": "src/",
-            "RustamAliHussaini\\EcommerceCompletionPackage\\Database\\Factories\\": "database/factories/"
+            "Ramaki\\Inventory\\": "src/",
+            "Ramaki\\Inventory\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RustamAliHussaini\\EcommerceCompletionPackage\\Tests\\": "tests/",
+            "Ramaki\\Inventory\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-ecommerce-completion-package --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-inventory --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -82,10 +82,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RustamAliHussaini\\EcommerceCompletionPackage\\EcommerceCompletionPackageServiceProvider"
+                "Ramaki\\Inventory\\InventoryServiceProvider"
             ],
             "aliases": {
-                "EcommerceCompletionPackage": "RustamAliHussaini\\EcommerceCompletionPackage\\Facades\\EcommerceCompletionPackage"
+                "Inventory": "Ramaki\\Inventory\\Facades\\Inventory"
             }
         }
     },

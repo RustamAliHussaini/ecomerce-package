@@ -1,9 +1,9 @@
 <?php
 
-namespace RustamAliHussaini\EcommerceCompletionPackage\Database\Factories;
+namespace Ramaki\Inventory\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use RustamAliHussaini\EcommerceCompletionPackage\Models\Warehouse;
+use Ramaki\Inventory\Models\Warehouse;
 
 class WarehouseFactory extends Factory
 {

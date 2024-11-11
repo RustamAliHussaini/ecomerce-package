@@ -1,6 +1,6 @@
 <?php
 
-namespace RustamAliHussaini\EcommerceCompletionPackage\Models;
+namespace Ramaki\Inventory\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

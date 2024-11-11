@@ -1,12 +1,12 @@
 <?php
 
-namespace RustamAliHussaini\EcommerceCompletionPackage\Commands;
+namespace Ramaki\Inventory\Commands;
 
 use Illuminate\Console\Command;
 
-class EcommerceCompletionPackageCommand extends Command
+class InventoryCommand extends Command
 {
-    public $signature = 'ecommerce-completion-package';
+    public $signature = 'inventory';
 
     public $description = 'My command';
 

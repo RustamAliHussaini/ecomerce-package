@@ -1,9 +1,9 @@
 # This package manage warehouses, inventories, and much more parts of ecommerce.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/rustam-ali/ecommerce-completion-package.svg?style=flat-square)](https://packagist.org/packages/rustam-ali/ecommerce-completion-package)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/rustam-ali/ecommerce-completion-package/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/rustam-ali/ecommerce-completion-package/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/rustam-ali/ecommerce-completion-package/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/rustam-ali/ecommerce-completion-package/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/rustam-ali/ecommerce-completion-package.svg?style=flat-square)](https://packagist.org/packages/rustam-ali/ecommerce-completion-package)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ramaki/ecommerce-completion-package.svg?style=flat-square)](https://packagist.org/packages/ramaki/ecommerce-completion-package)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ramaki/ecommerce-completion-package/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ramaki/ecommerce-completion-package/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ramaki/ecommerce-completion-package/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ramaki/ecommerce-completion-package/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/ramaki/ecommerce-completion-package.svg?style=flat-square)](https://packagist.org/packages/ramaki/ecommerce-completion-package)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -20,7 +20,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require rustam-ali/ecommerce-completion-package
+composer require ramaki/ecommerce-completion-package
 ```
 
 You can publish and run the migrations with:
@@ -52,8 +52,8 @@ php artisan vendor:publish --tag="ecommerce-completion-package-views"
 ## Usage
 
 ```php
-$ecommerceCompletionPackage = new RustamAliHussaini\EcommerceCompletionPackage();
-echo $ecommerceCompletionPackage->echoPhrase('Hello, RustamAliHussaini!');
+$ecommerceCompletionPackage = new Ramaki\Inventory();
+echo $ecommerceCompletionPackage->echoPhrase('Hello, Ramaki!');
 ```
 
 ## Testing
@@ -76,7 +76,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [RustamAliHussaini](https://github.com/Rustam Ali)
+- [Ramaki](https://github.com/Rustam Ali)
 - [All Contributors](../../contributors)
 
 ## License
