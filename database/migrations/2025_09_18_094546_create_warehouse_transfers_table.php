@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Lunar\Base\Migration;
 
 return new class extends Migration
 {
@@ -26,7 +26,7 @@ return new class extends Migration
             $table->foreign('from_warehouse_id')->references('id')->on('warehouses')->onDelete('cascade');
             $table->foreign('to_warehouse_id')->references('id')->on('warehouses')->onDelete('cascade');
             $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
-            $table->foreign('currency_id')->references('id')->on('lunar_currencies')->onDelete('set null');
+            $table->foreign('currency_id')->references('id')->on($this->prefix.'currencies')->onDelete('set null');
         });
     }
 

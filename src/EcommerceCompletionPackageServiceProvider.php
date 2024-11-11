@@ -2,7 +2,6 @@
 
 namespace RustamAliHussaini\EcommerceCompletionPackage;
 
-use Lunar\Admin\Support\Facades\LunarPanel;
 use RustamAliHussaini\EcommerceCompletionPackage\Commands\EcommerceCompletionPackageCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -27,7 +26,6 @@ class EcommerceCompletionPackageServiceProvider extends PackageServiceProvider
 
     public function register(): void
     {
-        LunarPanel::register();
     }
 
 

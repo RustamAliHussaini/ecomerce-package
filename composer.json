@@ -8,6 +8,12 @@
     ],
     "homepage": "https://github.com/rustam-ali/ecommerce-completion-package",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/samimhamza/lunar-ecommerce"
+        }
+    ],
     "authors": [
         {
             "name": "RustamAliHussaini",
@@ -18,9 +24,9 @@
     "require": {
         "php": "^8.2",
         "illuminate/contracts": "^10.0||^11.0",
-        "lunarphp/lunar": "^1.0.0-beta",
         "spatie/laravel-package-tools": "^1.16",
-        "stancl/tenancy": "^3.8"
+        "stancl/tenancy": "^3.8",
+        "lunarphp/lunar": "dev-custom-features"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -69,7 +75,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     },
     "extra": {

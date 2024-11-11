@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Lunar\Base\Migration;
 
 return new class extends Migration
 {
@@ -26,8 +26,8 @@ return new class extends Migration
             $table->unsignedBigInteger('seller_id')->nullable();
             $table->timestamps();
 
-            $table->foreign('country_id')->references('id')->on('lunar_countries')->onDelete('cascade');
-            $table->foreign('state_id')->references('id')->on('lunar_states')->onDelete('cascade');
+            $table->foreign('country_id')->references('id')->on($this->prefix . 'countries')->onDelete('cascade');
+            $table->foreign('state_id')->references('id')->on($this->prefix . 'states')->onDelete('cascade');
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('set null');
             $table->foreign('seller_id')->references('id')->on('sellers')->onDelete('set null');
             $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
