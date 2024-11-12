@@ -38,8 +38,8 @@ class WarehouseTransfer extends Model
         return $this->belongsTo(Warehouse::class, 'to_warehouse_id');
     }
 
-    // public function unit(): BelongsTo
-    // {
-    //     return $this->belongsTo(Unit::class);
-    // }
+    public function unit(): BelongsTo
+    {
+        return $this->belongsTo(config('inventory.unit_model'));
+    }
 }

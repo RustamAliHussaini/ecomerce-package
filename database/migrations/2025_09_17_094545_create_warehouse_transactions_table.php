@@ -20,6 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('currency_id')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
             $table->foreign('warehouse_id')->references('id')->on('warehouses')->onDelete('cascade');
             $table->foreign('unit_id')->references('id')->on('units')->onDelete('cascade');
             $table->foreign('currency_id')->references('id')->on($this->prefix.'currencies')->onDelete('set null');

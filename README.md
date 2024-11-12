@@ -36,6 +36,12 @@ You can publish the config file with:
 php artisan vendor:publish --tag="inventory-config"
 ```
 
+You can publish the config files of lunar with:
+
+```bash
+php artisan vendor:publish --tag="lunar-config"
+```
+
 This is the contents of the published config file:
 
 ```php

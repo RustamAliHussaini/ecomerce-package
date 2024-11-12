@@ -27,6 +27,11 @@ class InventoryServiceProvider extends PackageServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
+            __DIR__ . '/../config/inventory.php',
+            'inventory'
+        );
+
+        $this->mergeConfigFrom(
             __DIR__ . '/../config/lunar/cart_session.php',
             'lunar.cart_session'
         );
@@ -101,15 +106,19 @@ class InventoryServiceProvider extends PackageServiceProvider
                 __DIR__ . '/../config/lunar/shipping.php' => config_path('lunar/shipping.php'),
                 __DIR__ . '/../config/lunar/taxes.php' => config_path('lunar/taxes.php'),
                 __DIR__ . '/../config/lunar/urls.php' => config_path('lunar/urls.php'),
-            ], 'config');
+            ], 'lunar-config');
         }
-
-
-
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->publishes([
+            __DIR__.'/../config/inventory.php' => config_path('inventory.php'),
+        ],'inventory-config');
 
         $this->publishes([
             __DIR__ . '/../database/migrations' => database_path('migrations'),
         ], 'inventory-migrations');
+
+
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+
     }
 }

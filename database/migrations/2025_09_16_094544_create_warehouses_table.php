@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-          Schema::create('warehouses', function (Blueprint $table) {
+        Schema::create('warehouses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->integer('area');
@@ -26,12 +26,15 @@ return new class extends Migration
             $table->unsignedBigInteger('seller_id')->nullable();
             $table->timestamps();
 
+            // Foreign key constraints
             $table->foreign('country_id')->references('id')->on($this->prefix . 'countries')->onDelete('cascade');
             $table->foreign('state_id')->references('id')->on($this->prefix . 'states')->onDelete('cascade');
+
+            // The 'company_id' and 'seller_id' columns will reference models defined in the main project
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('set null');
             $table->foreign('seller_id')->references('id')->on('sellers')->onDelete('set null');
-            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
 
+            $table->foreign('tenant_id')->references('id')->on('tenants')->onDelete('cascade');
         });
     }
 

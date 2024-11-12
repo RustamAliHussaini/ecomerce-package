@@ -4,11 +4,15 @@ namespace Ramaki\Inventory\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Lunar\Models\OrderLine;
+use Stancl\Tenancy\Database\Concerns\BelongsToTenant;
+use Stancl\Tenancy\Database\Models\Tenant;
 
 class Warehouse extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes , BelongsToTenant;
 
     protected $fillable = [
         'name',
@@ -47,24 +51,23 @@ class Warehouse extends Model
         return $this->hasMany(WarehouseTransaction::class);
     }
 
-    // public function orderLines()
-    // {
-    //     return $this->hasMany(OrderLine::class);
-    // }
+    public function orderLines()
+    {
+        return $this->hasMany(OrderLine::class);
+    }
 
-    // public function company(): BelongsTo
-    // {
-    //     return $this->belongsTo(Company::class);
-    // }
+    public function company(): BelongsTo
+    {
+        return $this->belongsTo(config('inventory.company_model'));
+    }
 
-    // public function seller(): BelongsTo
-    // {
-    //     return $this->belongsTo(Seller::class);
-    // }
+    public function seller(): BelongsTo
+    {
+        return $this->belongsTo(config('inventory.seller_model'));
+    }
 
-    // public function tenant(): BelongsTo
-    // {
-    //     return $this->belongsTo(Tenant::class);
-    // }
-
+    public function tenant(): BelongsTo
+    {
+        return $this->belongsTo(Tenant::class);
+    }
 }

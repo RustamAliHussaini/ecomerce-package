@@ -23,6 +23,7 @@ return new class extends Migration
             $table->unsignedBigInteger('company_id')->nullable();
             $table->unsignedBigInteger('seller_id')->nullable();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('warehouse_id')->references('id')->on('warehouses')->onDelete('cascade');
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('set null');
