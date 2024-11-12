@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class WarehouseTransfer extends Model
 {
     use HasFactory, SoftDeletes;
+
     protected $fillable = [
         'transferable_type',
         'transferable_id',

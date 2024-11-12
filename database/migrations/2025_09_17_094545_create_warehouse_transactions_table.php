@@ -8,9 +8,9 @@ return new class extends Migration
 {
     public function up()
     {
-          Schema::create('warehouse_transactions', function (Blueprint $table) {
+        Schema::create('warehouse_transactions', function (Blueprint $table) {
             $table->id();
-            $table->morphs('transactionable','transactionable_index');
+            $table->morphs('transactionable', 'transactionable_index');
             $table->unsignedBigInteger('warehouse_id');
             $table->enum('transaction_type', ['in', 'out', 'transfer']);
             $table->integer('quantity');

@@ -12,7 +12,7 @@ use Stancl\Tenancy\Database\Models\Tenant;
 
 class Warehouse extends Model
 {
-    use HasFactory, SoftDeletes , BelongsToTenant;
+    use BelongsToTenant, HasFactory , SoftDeletes;
 
     protected $fillable = [
         'name',

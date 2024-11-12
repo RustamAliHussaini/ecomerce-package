@@ -11,7 +11,7 @@ use Stancl\Tenancy\Database\Models\Tenant;
 
 class Inventory extends Model
 {
-    use HasFactory, SoftDeletes ,BelongsToTenant ;
+    use BelongsToTenant, HasFactory ,SoftDeletes;
 
     protected $fillable = [
         'stockable_type',
@@ -44,6 +44,7 @@ class Inventory extends Model
     {
         return $this->belongsTo(config('inventory.seller_model'));
     }
+
     public function tenant(): BelongsTo
     {
         return $this->belongsTo(Tenant::class);

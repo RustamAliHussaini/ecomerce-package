@@ -27,8 +27,8 @@ return new class extends Migration
             $table->timestamps();
 
             // Foreign key constraints
-            $table->foreign('country_id')->references('id')->on($this->prefix . 'countries')->onDelete('cascade');
-            $table->foreign('state_id')->references('id')->on($this->prefix . 'states')->onDelete('cascade');
+            $table->foreign('country_id')->references('id')->on($this->prefix.'countries')->onDelete('cascade');
+            $table->foreign('state_id')->references('id')->on($this->prefix.'states')->onDelete('cascade');
 
             // The 'company_id' and 'seller_id' columns will reference models defined in the main project
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('set null');
